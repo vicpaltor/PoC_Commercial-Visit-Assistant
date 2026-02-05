@@ -88,4 +88,4 @@ com.bbva.apx.commercialvisit/
 - **Fake AI Adapter**: Simula respuestas de GPT-4 sin requerir API keys
 - **Mock Repository**: Simula acceso a base de datos Oracle con datos de prueba
 - **Data Anonymization**: Implementa hash básico para PII en entorno de producción
-- **Contract First**: API definida primero en OpenAPI 3.0
+- **Contract First**: API definida primero en OpenAPI 3.0# PoC_Commercial-Visit-Assistant
