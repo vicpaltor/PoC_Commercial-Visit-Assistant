@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /commercial-visit-assistant
+
+spring:
+  application:
+    name: commercial-visit-assistant
+  profiles:
+    active: dev
+    # Esto evita que la app falle al arrancar si no encuentra Mongo
+  data:
+    mongodb:
+      repositories:
+        type: none
+
+
+logging:
+  level:
+    com.bbva.apx.commercialvisit: DEBUG
+    org.springframework: INFO
+    root: INFO
+
+management:
+  health:
+    mongo:
+      enabled: false
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always

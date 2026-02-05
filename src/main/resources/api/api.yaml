@@ -1,0 +1,124 @@
+openapi: 3.0.3
+info:
+  title: Commercial Visit Assistant API
+  description: API para la generación de informes ejecutivos de clientes comerciales
+  version: 1.0.0
+  contact:
+    name: BBVA APX
+    email: apx@bbva.com
+servers:
+  - url: https://api.bbva.com/commercial-visit-assistant/v1
+    description: Producción
+  - url: https://api-dev.bbva.com/commercial-visit-assistant/v1
+    description: Desarrollo
+
+paths:
+  /visits/briefing/{clientId}:
+    get:
+      summary: Obtener briefing de visita comercial
+      description: Genera un resumen ejecutivo para una visita comercial basado en el perfil financiero del cliente
+      operationId: getVisitBriefing
+      tags:
+        - VisitBriefing
+      parameters:
+        - name: clientId
+          in: path
+          required: true
+          description: Identificador único del cliente
+          schema:
+            type: string
+            format: uuid
+            example: "12345678-1234-1234-1234-123456789012"
+      responses:
+        '200':
+          description: Breeding generado exitosamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VisitBriefingResponse'
+        '400':
+          description: Petición inválida
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '404':
+          description: Cliente no encontrado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+        '500':
+          description: Error interno del servidor
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  schemas:
+    VisitBriefingResponse:
+      type: object
+      required:
+        - clientId
+        - briefing
+        - generatedAt
+      properties:
+        clientId:
+          type: string
+          format: uuid
+          description: Identificador del cliente
+          example: "12345678-1234-1234-1234-123456789012"
+        briefing:
+          type: string
+          description: Resumen ejecutivo generado por IA
+          example: "Cliente con alto potencial de inversión en productos de patrimonio. Recomendado ofrecer productos de renta variable con perfil moderado-alto."
+        generatedAt:
+          type: string
+          format: date-time
+          description: Fecha y hora de generación del briefing
+          example: "2024-01-15T10:30:00Z"
+        riskProfile:
+          type: string
+          enum: [CONSERVADOR, MODERADO, AGRESIVO]
+          description: Perfil de riesgo del cliente
+          example: "MODERADO"
+        investmentCapacity:
+          type: number
+          format: double
+          description: Capacidad de inversión estimada
+          example: 150000.00
+
+    ErrorResponse:
+      type: object
+      required:
+        - code
+        - message
+        - timestamp
+      properties:
+        code:
+          type: string
+          description: Código de error
+          example: "CLIENT_NOT_FOUND"
+        message:
+          type: string
+          description: Mensaje descriptivo del error
+          example: "No se encontró información para el cliente especificado"
+        timestamp:
+          type: string
+          format: date-time
+          description: Timestamp del error
+          example: "2024-01-15T10:30:00Z"
+
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+security:
+  - BearerAuth: []
+
+tags:
+  - name: VisitBriefing
+    description: Operaciones relacionadas con el briefing de visitas comerciales

@@ -1,0 +1,13 @@
+package com.bbva.apx.commercialvisit;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CommercialVisitAssistantApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CommercialVisitAssistantApplication.class, args);
+    }
+
+}

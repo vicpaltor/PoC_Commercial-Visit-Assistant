@@ -1,0 +1,12 @@
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\application\ports\input\GetVisitBriefingUseCase.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\application\ports\output\ClientFinancialProfileRepository.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\application\ports\output\GenerativeAIAdapter.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\application\usecases\GetVisitBriefingUseCaseImpl.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\CommercialVisitAssistantApplication.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\config\ApplicationConfig.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\domain\model\ClientFinancialProfile.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\domain\service\DataAnonymizer.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\infrastructure\inbound\controller\VisitController.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\infrastructure\inbound\mapper\VisitMapper.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\infrastructure\outbound\external\ai\GenerativeAIFakeAdapter.java
+C:\Users\Victor\Desktop\Codigo Limpio\Workspace\PoC_Commercial-Visit-Assistant\src\main\java\com\bbva\apx\commercialvisit\infrastructure\outbound\repository\h2\ClientFinancialProfileH2Adapter.java
